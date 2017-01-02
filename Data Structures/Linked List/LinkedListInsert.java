@@ -73,7 +73,8 @@ public class LinkedListInsert
 			System.out.print("\n2. Insert Element @ Begining");
 			System.out.print("\n3. Insert Element @ After Previous Node");
 			System.out.print("\n4. Print the List");
-			System.out.print("\nEnter your Choise (1 - 4) : ");
+			System.out.print("\n5. Exit");
+			System.out.print("\nEnter your Choise (1 - 5) : ");
 			@SuppressWarnings("resource")
 			Scanner in = new Scanner(System.in);
 			x = in.nextInt();
@@ -93,6 +94,7 @@ public class LinkedListInsert
 						break;
 				case 4: l.print();
 						break;
+				case 5: return;
 				default: System.out.print("Wrong Choice Try Again");
 				 		 break;
 			}
