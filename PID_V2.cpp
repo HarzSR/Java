@@ -22,9 +22,10 @@ bool PID::Compute(){
 			//Derivative term using error change (Possible infinity errors could occure)
 			//DTerm = kd * ((error - pre_error)  / DeltaTS); //Derivative term
 			//pre_error = error;
-			/********************************************************************************************************************************
-			Kd*derror(temperature)/dtime = -Kd*dangle(temperature)/dttime // The two equations are equal Second one avoids infinity errors
-			*********************************************************************************************************************************/
+			/*****************************************************************************************************
+			Kd*derror(temperature)/dtime = -Kd*dangle(temperature)/dttime // The two equations are equal Second 
+			one avoids infinity errors
+			******************************************************************************************************/
 			// Derivative term using angle change
 			DTerm = -kd * ((Input - lastInput)  / DeltaTS); //Derivative term  avoid infinity errors
 			lastInput = Input;
